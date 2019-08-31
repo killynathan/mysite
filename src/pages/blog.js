@@ -1,14 +1,16 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import PostListing from "../components/postListing"
 
-export default ({ data }) => (
-  <Layout>
-    {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
-    <PostListing posts={data.allMarkdownRemark.edges} />
-  </Layout>
-)
+export default ({ data }) => {
+  return (
+    <Layout>
+      <h1>Blog</h1>
+      <PostListing posts={data.allMarkdownRemark.edges} />
+    </Layout>
+  )
+}
 
 export const query = graphql`
   query {
@@ -23,7 +25,6 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
-            visible
           }
           excerpt
         }

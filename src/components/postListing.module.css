@@ -1,0 +1,29 @@
+.link {
+  text-decoration: none;
+}
+
+.post {
+  border: 2px solid transparent;
+  border-bottom-color: #343434;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.post:hover {
+  background-color: #343434;
+}
+
+.date {
+  margin-bottom: 0px;
+  font-size: 0.9em;
+  color: #777c85;
+}
+
+.title {
+  margin-bottom: 0.3rem;
+  color: #ccc;
+}
